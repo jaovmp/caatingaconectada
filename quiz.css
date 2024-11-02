@@ -1,0 +1,117 @@
+/* Estilos Gerais */
+body {
+    background-color: #e9f5e9; /* Fundo suave */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove margens padrão do body */
+    overflow: hidden; /* Remove a rolagem indesejada */
+}
+
+.container-quiz {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+}
+
+.quiz-card {
+    background-color: #ffffffc0; /* Fundo do card */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px;
+    width: 90%; /* Largura do card */
+    max-width: 600px; /* Largura máxima */
+    text-align: center; /* Centraliza o texto dentro do card */
+}
+
+#start-screen {
+    display: flex; /* Flex para alinhar itens */
+    flex-direction: column; /* Coluna para empilhar */
+    align-items: center; /* Centraliza os itens na horizontal */
+}
+
+#start-screen img {
+    margin: 20px 0; /* Espaço acima e abaixo da imagem */
+    width: 250px; /* Largura fixa da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Títulos do Quiz */
+.quiz-card h1 {
+    color: rgb(124, 144, 88); /* Cor verde personalizada */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.quiz-card h2 {
+    color: #333; /* Cor escura para o resultado */
+    text-align: center; /* Centraliza o título */
+    opacity: 0; /* Começa invisível para a animação */
+    animation: fadeIn 0.5s forwards; /* Animação de entrada */
+}
+
+/* Botões */
+.quiz-card .btn {
+    width: 100%; /* Botões ocupando toda a largura */
+    padding: 10px;
+    font-size: 18px; /* Tamanho da fonte dos botões */
+    margin-top: 15px; /* Espaço acima do botão */
+    background-color: rgb(124, 144, 88); /* Cor do botão */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.2s, transform 0.2s; /* Animação ao passar o mouse */
+}
+
+.quiz-card .btn:hover {
+    background-color: rgba(124, 144, 88, 0.8); /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o botão ao passar o mouse */
+}
+
+/* Questões e Opções */
+.quiz-card .question {
+    font-size: 22px; /* Tamanho da fonte da questão */
+    color: #333; /* Cor escura para o texto */
+    margin-bottom: 20px; /* Espaço abaixo da questão */
+    text-align: center; /* Centraliza o texto da questão */
+    opacity: 0; /* Começa invisível para a animação */
+    animation: slideIn 0.5s forwards; /* Animação de entrada */
+}
+
+.quiz-card .options {
+    display: flex;
+    flex-direction: column; /* Opções em coluna */
+    gap: 10px; /* Espaço entre as opções */
+}
+
+/* Estilo do Resultado */
+.quiz-card #final-score {
+    font-size: 24px; /* Tamanho da fonte da pontuação final */
+    color: rgb(124, 144, 88); /* Cor verde personalizada */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaço acima da pontuação */
+    opacity: 0; /* Começa invisível para a animação */
+    animation: fadeIn 0.5s forwards; /* Animação de entrada */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-10px); /* Move um pouco para cima */
+    }
+    to {
+        opacity: 1; /* Torna-se visível */
+        transform: translateY(0); /* Volta à posição original */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-20px); /* Move um pouco para cima */
+    }
+    to {
+        opacity: 1; /* Torna-se visível */
+        transform: translateY(0); /* Volta à posição original */
+    }
+}

@@ -1,0 +1,139 @@
+body {
+  background-color: #333;
+}
+
+.conservacao-principal {
+  display: flex;
+  gap: 100px; /* Espaço entre os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  margin: 0 auto; /* Centraliza a div na página */
+  max-width: 1200px; /* Define uma largura máxima para a div */
+  padding: 20px; /* Adiciona um espaçamento interno */
+  margin-top: 10px; /* Adiciona distância no topo */
+}
+
+.conservacao-textos {
+  width: 500px; 
+  color: #fff;
+}
+
+.conservacao-textos h1 {
+  font-size: 50px;
+  width: 700px;
+}
+
+.conservacao-textos p {
+  font-size: 25px;
+  text-align: justify;
+}
+
+.imagem-conservacao {
+  width: 400px;
+  border-radius: 200px;
+}
+.mapainterativo {
+  text-align: center;
+  background-color: #fafafa; /* Um tom mais claro para destacar */
+  padding: 40px; /* Aumenta o espaçamento interno para uma aparência mais arejada */
+  border-radius: 20px; /* Bordas mais arredondadas para um visual suave */
+  max-width: 450px; /* Largura máxima para manter a harmonia */
+  margin: 40px auto; /* Centraliza a div na página */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombras mais suaves e profundas */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; /* Transição suave para hover */
+}
+
+.mapainterativo:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+.selecione-cidade {
+  margin: 25px 0; /* Espaço mais espaçoso acima e abaixo */
+  width: 100%; /* Garante que ocupa toda a largura */
+}
+
+.mapainterativo h2 {
+  font-size: 26px; /* Tamanho do título ligeiramente maior */
+  color: #333; /* Um tom mais escuro para maior legibilidade */
+  margin-bottom: 20px; /* Menor espaço abaixo do título */
+  font-weight: 700; /* Título mais destacado */
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.3); /* Sombra leve no texto para destaque */
+}
+
+/* Estilo do select */
+.mapainterativo select {
+  padding: 12px;
+  width: 90%; /* Um pouco mais largo */
+  max-width: 380px; /* Largura máxima para responsividade */
+  font-size: 16px;
+  border: 1px solid #ddd; /* Bordas mais suaves */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #fff;
+  color: #444; /* Um tom mais suave que preto */
+  transition: all 0.3s ease;
+  outline: none; /* Remove contorno padrão */
+  appearance: none; /* Remove estilo padrão do select */
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"%3e%3cpath d="M6 9l6 6 6-6"/%3e%3c/svg%3e');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Uma leve sombra para profundidade */
+}
+
+/* Efeitos de hover e foco para o select */
+.mapainterativo select:hover, 
+.mapainterativo select:focus {
+  border-color: #999; /* Tom intermediário ao focar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Realça com sombra ao focar */
+  transform: scale(1.02); /* Efeito de leve aumento */
+}
+
+/* Estilização do iframe */
+.iframe-wrapper {
+  display: flex; /* Usar flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente (se houver altura) */
+  overflow: hidden; /* Evita que a borda apareça em overflow */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  height: 400px; /* Altura fixa para o wrapper */
+  margin: 20px 0; /* Espaçamento vertical ao redor do iframe */
+}
+
+iframe {
+  width: 100%; /* Largura total da div pai */
+  height: 100%; /* Altura total do wrapper */
+  border: none; /* Remove a borda padrão */
+  border-radius: 20px; /* Bordas arredondadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+iframe:hover {
+  transform: scale(1.02); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .mapainterativo {
+    padding: 25px; /* Diminui o padding em telas menores */
+    max-width: 95%; /* Ajusta a largura máxima no mobile */
+  }
+
+  .mapainterativo h2 {
+    font-size: 22px; /* Tamanho do título no mobile */
+  }
+
+  .mapainterativo select {
+    font-size: 14px; /* Tamanho do texto no select no mobile */
+  }
+
+  .iframe-wrapper {
+    height: 300px; /* Ajusta a altura do iframe no mobile */
+  }
+}

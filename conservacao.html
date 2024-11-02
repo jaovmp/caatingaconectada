@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Órgãos de Conservação</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="mapabombeiros.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Caatinga Conectada🌵</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reflorestamento.html">Reflorestamento</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="conservacao.html">Órgãos de Conservação</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="prevencao.html">Prevenção de Incêndios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="quizemateriais.html">Quiz e Materiais Didáticos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="alunos.html">Integrantes</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="conservacao-principal">
+        <img src="conservacao1.jpg" alt="" class="imagem-conservacao">
+        <div class="conservacao-textos">
+          <h1>Proteção e Conservação: Bombeiros e Órgãos Ambientais.</h1>
+          <p>O corpo de bombeiros e o Ibama são exemplos dos principais órgãos cruciais para a proteção do nosso bioma, desempenhando papéis fundamentais no combate ao desmatamento e na preservação da fauna e flora da Caatinga, contando com a colaboração da população.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="conservacao2.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Função dos Bombeiros na Conservação Ambiental</h5>
+                <p class="card-text">O combate a incêndios florestais, o resgate de animais silvestres, a educação ambiental, o trabalho de prevenção e monitoramento, e a participação em ações de emergência ambiental são atividades fundamentais para proteger e preservar o meio ambiente.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">1</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="conservacao5.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Colaboração com Órgãos Ambientais</h5>
+                <p class="card-text">Nosso site contribuirá com estes órgãos de proteção ambiental, construindo uma ponte de fácil acesso entre a população e essas instituições, visando a cooperação dos caatingueiros em prol do nosso bioma.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">2</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="conservacao4.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Educação e Prevenção de Incêndios</h5>
+                <p class="card-text">A conscientização sobre os riscos de incêndios é fundamental para prevenir tragédias e salvar vidas. Incêndios podem ocorrer em qualquer lugar, a qualquer momento, e seus efeitos são devastadores. Entre os principais riscos estão curtos-circuitos elétricos, fogos abertos, materiais inflamáveis e equipamentos defeituosos.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">3</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mapainterativo">
+        <div class="selecione-cidade">
+          <h2>Selecione sua cidade:</h2>
+          <select id="citySelect" onchange="showFireDepartmentInfo()">
+            <option value="">Selecione uma cidade</option>
+            <option value="cidade1">Petrolina - PE</option>
+            <option value="cidade2">Juazeiro - BA</option>
+          </select>
+        </div>
+
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="infoModalLabel">Informações do Corpo de Bombeiros</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="infoDisplay">
+                <!-- O conteúdo dinâmico será inserido aqui -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="modal.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
