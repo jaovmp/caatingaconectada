@@ -1,0 +1,279 @@
+/* Etilização o fundo */
+body {
+    margin: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.01s ease-in-out; /* Suave transição entre imagens */
+  }
+  
+.logo{
+    width: 1px;
+}
+/* Etilização da tela Home */
+
+.home-principal {
+    display: flex;
+    gap: 100px; /* Espaço entre os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin: 0 auto; /* Centraliza a div na página */
+    max-width: 1200px; /* Define uma largura máxima para a div */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    margin-top: 100px; /* Adiciona distancia no topo */
+}
+
+.home-textos{
+    width: 500px; 
+    color: rgb(255, 255, 255);
+}
+
+.home-textos h1{
+    font-size: 50px;
+    color: rgb(124, 144, 88);
+}
+
+.home-textos p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+.imagem-home{
+    width: 400px;
+    border-radius: 200px;
+}
+
+/* Etilização da tela de reflorestamento */
+
+.container{
+    margin-top: 20px;
+    width: 95%;
+    margin-bottom: 25px;
+}
+
+/* Etilização da tela de conservação */
+
+.conservacao-principal {
+    display: flex;
+    gap: 100px; /* Espaço entre os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin: 0 auto; /* Centraliza a div na página */
+    max-width: 1200px; /* Define uma largura máxima para a div */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    margin-top: 10px; /* Adiciona distancia no topo */
+}
+
+.conservacao-textos{
+    width: 500px; 
+    color: #fff;
+}
+
+.conservacao-textos h1{
+    font-size: 50px;
+    width:700px;
+    color: rgb(124, 144, 88);
+}
+
+.conservacao-textos p{
+    font-size: 25px;
+    text-align: justify;
+    width: 600px;
+}
+
+.imagem-conservacao{
+    width: 400px;
+    border-radius: 200px;
+}
+
+.mapainterativo select{
+    font-size: 25px;
+    margin-left: 24px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal-header h5 {
+    color: black;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.573); /* Cor de fundo branca com 80% de opacidade */
+    border: none; /* Remove a borda, se necessário */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+    margin-bottom: 100px;
+  }
+  
+  .card:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Aumenta a opacidade ao passar o mouse */
+  }
+  
+/* Etilização da tela de Prevencao */
+
+iframe{
+    border-radius: 20px;
+}
+
+.prevencao-textos{
+    width: 500px; 
+    color: #f5f5f5 ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.prevencao-textos h1{
+    font-size: 40px;
+    color: rgb(124, 144, 88);
+    width: 540px;
+}
+
+.prevencao-textos p{
+    font-size: 17px;
+    text-align: justify;
+}
+
+.btn-bombeiros {
+    display: inline-block;
+    background-color: rgb(124, 144, 88); /* Vermelho */
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px; /* Arredondado */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animação suave */
+}
+
+.btn-bombeiros:hover {
+    background-color: rgb(153, 185, 94);
+}
+
+.btn-bombeiros:active {
+    transform: scale(0.95);
+}
+
+
+.alunos-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 70%;
+}
+
+  
+  .card-aluno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .card-aluno:hover {
+    transform: translateY(-10px); /* Elevação suave ao passar o mouse */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Aplicando o background com opacidade usando ::before */
+  .card-aluno::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Adapta a imagem ao tamanho do card */
+    background-position: center;
+    opacity: 0.3; /* Ajusta a opacidade da imagem de fundo */
+    z-index: 0; /* Certifica que o fundo fique atrás do conteúdo */
+  }
+  
+  /* Imagens de fundo para cada card */
+  .card-aluno:nth-child(1)::before {
+    background-image: url('fundo1.jpg');
+  }
+  
+  .card-aluno:nth-child(2)::before {
+    background-image: url('fundo1.jpg');
+  }
+  
+  .card-aluno:nth-child(3)::before {
+    background-image: url('fundo1.jpg');
+  }
+  
+  .card-aluno:nth-child(4)::before {
+    background-image: url('fundo1.jpg');
+  }
+  
+  .card-aluno:nth-child(5)::before {
+    background-image: url('fundo1.jpg');
+  }
+  
+  /* Garantir que o conteúdo fique acima do fundo */
+  .card-aluno-image, .card-aluno-content {
+    position: relative;
+    z-index: 1; /* Mantém o conteúdo acima da imagem de fundo */
+  }
+  
+  /* Estilo para a imagem circular do aluno */
+  .card-aluno-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(124, 144, 88);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card-aluno-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+  }
+  
+  .card-aluno-content h2 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  
+  .card-aluno-content p {
+    font-size: 16px;
+    color: #ddd;
+    margin-top: 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .card-aluno {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .card-aluno-image {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .card-aluno-content h2 {
+      font-size: 18px;
+    }
+  }
+  
